@@ -17,7 +17,11 @@ public class Calculator
         	{
         	   return sum(splitNumbers(numbers));
         	}
-        	else
+        	else if(numbers.contains("\n"))
+		{
+		   return sum(numbers.split("\n"));
+		}
+		else
         	{
                    return 10;
 		}

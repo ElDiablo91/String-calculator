@@ -36,11 +36,14 @@ public class CalculatorTest {
 		assertEquals(8, Calculator.add("2,2,2,2"));
 	}
 
+//	@Test
+//	public void testForOneNumberAndNewline(){
+//		assertEquals(10, Calculator.add("2\n"));
+//	}
+
 	@Test
-	public void testForOneNumberAndNewline(){
-		assertEquals(10, Calculator.add("2\n"));
+	public void TestMultipleNumbersAndNewline(){
+		assertEquals(3, Calculator.add("1\n2"));
 	}
-
-
 
 }

@@ -35,4 +35,12 @@ public class CalculatorTest {
 	public void testMultipleNumbers2(){
 		assertEquals(8, Calculator.add("2,2,2,2"));
 	}
+
+	@Test
+	public void testForOneNumberAndNewline(){
+		assertEquals(10, Calculator.add("2\n"));
+	}
+
+
+
 }

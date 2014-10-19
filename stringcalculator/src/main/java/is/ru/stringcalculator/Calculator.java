@@ -8,7 +8,8 @@ public class Calculator
 		{
 			return 0;
 		}
-	        else if(!numbers.contains(","))
+	        else if(!numbers.contains(",") 
+			&& !numbers.contains("\n"))
 	        {
         	   return toInt(numbers);
        	 	}
@@ -18,7 +19,7 @@ public class Calculator
         	}
         	else
         	{
-                   return 0;
+                   return 10;
 		}
 	}
 

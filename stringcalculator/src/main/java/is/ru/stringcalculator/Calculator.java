@@ -13,14 +13,22 @@ public class Calculator
 	        {
         	   return toInt(numbers);
        	 	}
-        	else if(numbers.contains(","))
+        	else if(numbers.contains(",") || numbers.contains("\n") )
         	{
-        	   return sum(splitNumbers(numbers, ","));
+		   int sum = 0;
+		   String[] subStrings = splitNumbers(numbers, "\n");
+
+		   for(String subString : subStrings)
+		   {
+			sum += sum(splitNumbers(subString, ","));
+		   }
+		   
+        	   return sum;
         	}
-        	else if(numbers.contains("\n"))
+        	/*else if(numbers.contains("\n"))
 		{
 		   return sum(splitNumbers(numbers, "\n"));
-		}
+		}*/
 		else
         	{
                    return 10;

@@ -15,11 +15,11 @@ public class Calculator
        	 	}
         	else if(numbers.contains(","))
         	{
-        	   return sum(splitNumbers(numbers));
+        	   return sum(splitNumbers(numbers, ","));
         	}
         	else if(numbers.contains("\n"))
 		{
-		   return sum(numbers.split("\n"));
+		   return sum(splitNumbers(numbers, "\n"));
 		}
 		else
         	{
@@ -32,9 +32,9 @@ public class Calculator
 		return Integer.parseInt(number);
 	}
 
-	private static String[] splitNumbers(String numbers)
+        private static String[] splitNumbers(String numbers, String splitOn)
 	{
-	    	return numbers.split(",");
+	    	return numbers.split(splitOn);
 	}
       
    	private static int sum(String[] numbers)	

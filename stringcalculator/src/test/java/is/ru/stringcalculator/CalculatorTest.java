@@ -52,5 +52,10 @@ public class CalculatorTest {
 		assertEquals(10, Calculator.add("2,2\n2,2\n2"));
 	}
 
-
+	@Test //8.
+	public void TestDeliminatorIndecation()
+	{
+		assertEquals(11, Calculator.add("//;ab"));
+//		assertEquals(11, Calculator.add("//stuff;"));
+	}
 }

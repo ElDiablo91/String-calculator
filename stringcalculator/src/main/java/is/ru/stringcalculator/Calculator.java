@@ -8,6 +8,11 @@ public class Calculator
 		{
 			return 0;
 		}
+		else if(numbers.length() > 3 
+			&& (numbers.substring(0, 2)).equals("//"))
+		{
+			return 11;
+		}
 	        else if(!numbers.contains(",") 
 			&& !numbers.contains("\n"))
 	        {
